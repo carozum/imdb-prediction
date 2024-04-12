@@ -19,14 +19,6 @@ X_train, X_test, y_train, y_test = train_test_split(
 print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 
 
-# Standardisation
-scaler = StandardScaler()
-# Ajustement du scaler sur les données d'entraînement
-X_train_scaled = scaler.fit_transform(X_train)
-# Utilisation du scaler sur les données de test
-X_test_scaled = scaler.transform(X_test)
-
-
 # gradient boosting
 gb = GradientBoostingRegressor(
     n_estimators=100,
